@@ -1,0 +1,4 @@
+INSERT INTO book(book_id,book_name,author_name,publisher,publishing_date, version) VALUES(1,'The Room On the Roof', 'Ruskin Bond', 'Penguin Books', '2010/01/01', 1);
+INSERT INTO book(book_id,book_name,author_name,publisher,publishing_date, version) VALUES(2,'Harry potter','J.K Rowling','Scholastic Press', '2010/02/01', 1);
+INSERT INTO book(book_id,book_name,author_name,publisher,publishing_date, version) VALUES(3,'The Immortals of Meluha','Amish Tripathi', 'Westland Press','2010/03/01', 1);
+INSERT INTO book(book_id,book_name,author_name,publisher,publishing_date, version) VALUES(4,'Scion of Ikshvaku','Amish Tripathi', 'Westland Press', '2010/04/01', 1);
