@@ -27,25 +27,29 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
-    @CachePut(cacheNames = "Tickets", key = "#Ticket.id")
+    @CachePut(cacheNames = "ticketCache", key = "#ticket.ticketId")
     public Ticket updateTicket(Ticket ticket) {
-        ticketRepository.findById(ticket.getTicketId());
+        Optional<Ticket> ticket1 = ticketRepository.findById(ticket.getTicketId());
+        if(ticket1.isPresent()) {
+            ticket1.get().setPassengerName(ticket.getPassengerName());
+            return ticketRepository.save(ticket1.get());
+        }
         logger.info("Ticket updated with new name");
         return ticket;
     }
 
     @Override
-    @Cacheable(cacheNames = "Tickets", key = "#id")
-    public Ticket getTicket(long id) {
+    @Cacheable(cacheNames = "ticketCache", key = "#ticketId")
+    public Ticket getTicket(Long ticketId) {
         logger.info("fetching Ticket from db");
-        Optional<Ticket> Ticket = ticketRepository.findById(id);
+        Optional<Ticket> Ticket = ticketRepository.findById(ticketId);
         return Ticket.orElseGet(com.ehcachecrud.dto.Ticket::new);
     }
 
     @Override
-    @CacheEvict(cacheNames = "Tickets", key = "#id")
-    public String deleteTicket(long id) {
-        ticketRepository.deleteById(id);
+    @CacheEvict(cacheNames = "ticketCache", key = "#ticketId")
+    public String deleteTicket(Long ticketId) {
+        ticketRepository.deleteById(ticketId);
         return "Ticket deleted";
     }
 

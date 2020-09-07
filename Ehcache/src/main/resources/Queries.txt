@@ -1,0 +1,26 @@
+{
+	"ticketId": 1,
+	"passengerName": "AAA",
+	"bookingDate": "2019-01-01",
+	"sourceStation": "mumbai",
+	"destStation": "delhi",
+	"email": "abc@gmail.com"
+}
+
+{
+	"ticketId": 2,
+	"passengerName": "BBB",
+	"bookingDate": "2019-02-01",
+	"sourceStation": "chennai",
+	"destStation": "kolkat",
+	"email": "xyz@gmail.com"
+}
+
+{
+	"ticketId": 3,
+	"passengerName": "CCC",
+	"bookingDate": "2020-02-01",
+	"sourceStation": "goa",
+	"destStation": "mumbai",
+	"email": "pqr@gmail.com"
+}

@@ -6,28 +6,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/ticket-management")
 public class TicketController {
 
     @Autowired
     private TicketService ticketService;
 
-    @PostMapping("/Ticket")
+    @PostMapping("/ticket")
     public Ticket addTicket(@RequestBody Ticket ticket) {
         return ticketService.addTicket(ticket);
     }
 
-    @PutMapping("/Ticket")
+    @PutMapping("/ticket")
     public Ticket updateTicket(@RequestBody Ticket ticket) {
         return ticketService.updateTicket(ticket);
     }
 
-    @GetMapping("/Ticket/{id}")
-    public Ticket getTicket(@PathVariable long tId) {
-        return ticketService.getTicket(tId);
+    @GetMapping("/ticket/{ticketId}")
+    public Ticket getTicket(@PathVariable("ticketId") Long ticketId) {
+        return ticketService.getTicket(ticketId);
     }
 
-    @DeleteMapping("/Ticket/{id}")
-    public String deleteTicket(@PathVariable long tId) {
-        return ticketService.deleteTicket(tId);
+    @DeleteMapping("/ticket/{ticketId}")
+    public String deleteTicket(@PathVariable("ticketId") Long ticketId) {
+        return ticketService.deleteTicket(ticketId);
     }
 }

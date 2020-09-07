@@ -1,4 +1,4 @@
-package com.chacheablecrud.config;//package com.cache.employee.config;
+package com.cacheable.config;//package com.cache.employee.config;
 //
 //import org.springframework.boot.autoconfigure.cache.CacheManagerCustomizer;
 //import org.springframework.cache.concurrent.ConcurrentMapCacheManager;

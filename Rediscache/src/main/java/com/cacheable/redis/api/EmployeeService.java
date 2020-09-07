@@ -1,7 +1,6 @@
-package com.chacheablecrud.api;
+package com.cacheable.redis.api;
 
-
-import com.chacheablecrud.dto.Employee;
+import com.cacheable.redis.dto.Employee;
 
 import java.util.List;
 

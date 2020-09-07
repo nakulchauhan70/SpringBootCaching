@@ -7,7 +7,7 @@ public interface TicketService {
 
     Ticket updateTicket(Ticket Ticket);
 
-    Ticket getTicket(long tId);
+    Ticket getTicket(Long tId);
 
-    String deleteTicket(long tId);
+    String deleteTicket(Long tId);
 }

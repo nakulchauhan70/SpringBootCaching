@@ -5,9 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>Cacheable</module>
-		<module>CachebaleCustomConfiguration</module>
 		<module>Ehcache</module>
         <module>CacheableCacheManagerWithDB</module>
+        <module>Rediscache</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>

@@ -1,7 +1,7 @@
-package com.chacheablecrud.api;
+package com.cacheable.api;
 
-import com.chacheablecrud.dto.Employee;
-import com.chacheablecrud.repository.EmployeeRepository;
+import com.cacheable.dto.Employee;
+import com.cacheable.repository.EmployeeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

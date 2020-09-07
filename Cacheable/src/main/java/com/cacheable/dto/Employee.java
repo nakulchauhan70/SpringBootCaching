@@ -1,4 +1,4 @@
-package com.chacheablecrud.dto;
+package com.cacheable.dto;
 
 import javax.persistence.*;
 

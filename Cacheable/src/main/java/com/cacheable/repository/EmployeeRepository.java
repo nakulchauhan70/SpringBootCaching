@@ -1,7 +1,6 @@
-package com.chacheablecrud.repository;
+package com.cacheable.repository;
 
-
-import com.chacheablecrud.dto.Employee;
+import com.cacheable.dto.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

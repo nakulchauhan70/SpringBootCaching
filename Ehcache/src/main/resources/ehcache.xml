@@ -8,7 +8,7 @@
 <!--    <diskStore path="java.io.tmpdir" />-->
     <diskStore path="user.dir" />
 
-    <cache name="books"
+    <cache name="ticketCache"
            maxEntriesLocalHeap="5"
            maxEntriesLocalDisk="10"
            eternal="false"
