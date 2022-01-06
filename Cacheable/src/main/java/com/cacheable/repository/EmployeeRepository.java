@@ -10,8 +10,8 @@ import javax.transaction.Transactional;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Transactional
     @Modifying
-    @Query("update Employee u set u.name=?2 where u.id=?1")
-    int updateAddress(long id, String name);
+    @Query("update Employee emp set emp.address=?2 where emp.id=?1")
+    int updateAddress(long id, String address);
 }
 
 

@@ -14,13 +14,12 @@
            eternal="false"
            diskSpoolBufferSizeMB="20"
            timeToIdleSeconds="3000"
-           timeToLiveSeconds="6000"
+           timeT    oLiveSeconds="6000"
            memoryStoreEvictionPolicy="LFU"
            transactionalMode="off"
-
            >
-        <persistence strategy="localTempSwap" />
-<!--        <persistence strategy="LOCALRESTARTABLE" />-->
+<!--        <persistence strategy="localTempSwap" />    &lt;!&ndash;.data file is refreshed&ndash;&gt;-->
+        <persistence strategy="LOCALRESTARTABLE" />  comes with enterprise version
     </cache>
 
 </ehcache>

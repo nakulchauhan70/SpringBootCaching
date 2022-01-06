@@ -16,9 +16,10 @@ public class EhcacheConfig {
     }
 
     private net.sf.ehcache.CacheManager ehCacheManager() {
-        EhCacheManagerFactoryBean factoryBean = new EhCacheManagerFactoryBean();
+        EhCacheManagerFactoryBean factoryBean = new EhCacheManagerFactoryBean();    //used to create bean for ehcache or redis cache manager
         factoryBean.setConfigLocation(new ClassPathResource("ehcache.xml"));
         factoryBean.setShared(true);
         return factoryBean.getObject();
     }
+
 }

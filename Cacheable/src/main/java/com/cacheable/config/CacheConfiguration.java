@@ -1,4 +1,4 @@
-package com.cacheable.config;//package com.cache.employee.config;
+//package com.cacheable.config;//package com.cache.employee.config;
 //
 //import org.springframework.boot.autoconfigure.cache.CacheManagerCustomizer;
 //import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
@@ -7,9 +7,6 @@ package com.cacheable.config;//package com.cache.employee.config;
 //
 //import java.util.Arrays;
 //
-///**
-// * @author - GreenLearner(https://www.youtube.com/channel/UCaH2MTg94hrJZTolW01a3ZA)
-// */
 //@Configuration
 //public class CacheConfiguration {
 //
@@ -23,7 +20,8 @@ package com.cacheable.config;//package com.cache.employee.config;
 //        @Override
 //        public void customize(ConcurrentMapCacheManager cacheManager) {
 //            cacheManager.setAllowNullValues(false);
-//            //cacheManager.setStoreByValue(true);
+//            cacheManager.
+//                //cacheManager.setStoreByValue(true);     //store value in serializable format, default is false
 //            System.out.println("customizer invoked!!");
 //        }
 //    }

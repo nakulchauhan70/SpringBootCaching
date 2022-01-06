@@ -22,8 +22,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
 
     @Override
+    @Cacheable(cacheNames = "employees", key="#employee.empId")
     public Employee addEmployee(Employee employee) {
-        logger.info("adding employee with empId");
+        logger.info("adding employee");
         return employeeRepository.save(employee);
     }
 
@@ -40,6 +41,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 //        return updatedEmployee;
     }
 
+    //#unles="result==null"
     @Override
     @Cacheable(cacheNames = "employees", key="#empId")      //key nme must be same with argument pass in method, eg. id in key and empId in method won't wor, either both should be id or empId
     public Employee getEmployee(long empId) {               //cacheNames must be same other wise we may lead with up expected response
@@ -52,12 +54,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
 
-    @Override
-    @Cacheable(cacheNames = "employees")
-    public List<Employee> getAllEmployees() {
-        logger.info("fetching all employees from db");
-        return employeeRepository.findAll();
-    }
+//    @Override
+//    @Cacheable(cacheNames = "employees")
+//    public List<Employee> getAllEmployees() {
+//        logger.info("fetching all employees from db");
+//        return employeeRepository.findAll();
+//    }
 
     @Override
     @CacheEvict(cacheNames = "employees", key = "#empId")

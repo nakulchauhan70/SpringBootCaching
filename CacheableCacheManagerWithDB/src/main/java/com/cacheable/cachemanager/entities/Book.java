@@ -16,7 +16,7 @@ public class Book {
     private String publisher;
     private LocalDate publishingDate;
 
-    @Column(name = "book_id", nullable = false)
+    @Column(name = "book_id", nullable = false  )
     public Integer getBookId() {
         return bookId;
     }
